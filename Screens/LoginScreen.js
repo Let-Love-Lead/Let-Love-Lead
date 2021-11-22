@@ -1,10 +1,12 @@
 import React from "react";
-import { View, Text, Image, TouchableOpacity, Button, Pressable } from "react-native";
+import { View, Text, Image, ImageBackground, TouchableOpacity, Button, Pressable } from "react-native";
 import { AntDesign } from '@expo/vector-icons';
 
-export default function Login({ navigation }) {
+
+
+export default function LoginScreen({ navigation }) {
     return (
-        < View style={{flex: 1, justifyContent: "center", alignItems: "center" }}>
+        < View style={{ flex: 1, justifyContent: "center", alignItems: "center"}}>
             <Image
                 style={{
                     width: 250,
@@ -38,8 +40,8 @@ export default function Login({ navigation }) {
                 <Button
                     andriod_ripple
                     onPress={() => {
-                        navigation.navigate("Home")}}
-                   title="Next"/>
+                        navigation.navigate("HomeScreen")}}
+                   title="Skip"/>
                 </Pressable>
                 </View>
     </View >

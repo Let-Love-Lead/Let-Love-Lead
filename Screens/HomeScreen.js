@@ -2,23 +2,24 @@ import React from "react";
 import { View, Text, Button, Image, TouchableOpacity, ScrollView, Pressable} from "react-native";
 import { Ionicons, MaterialCommunityIcons, Foundation, MaterialIcons, AntDesign } from '@expo/vector-icons';
 
-export default function Home({ navigation }) {
+export default function HomeScreen({ navigation }) {
     return (
         <ScrollView>
-        <View style={{ backgroundColor: "white", }}>
+        <View style={{ backgroundColor: "black", }}>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 10, }}>
                     <TouchableOpacity>
-                        <Ionicons name="menu" size={24} color="black" />
+                        <Ionicons name="menu" size={24} color="white" />
                     </TouchableOpacity>
-                <MaterialCommunityIcons name="dresser" size={24} color="black" />
+                <MaterialCommunityIcons name="dresser" size={24} color="white" />
                 <View style={{ flexDirection: 'row' }}>
-                    <Ionicons name="search-sharp" size={20} color="black" />
-                    <Ionicons name="notifications" size={20} color="black" /> 
+                    <Ionicons name="search-sharp" size={20} color="white" />
+                    <Ionicons name="notifications" size={20} color="white" /> 
                 </View>
-            </View>
+                </View>
+              
             <Text style={{ paddingHorizontal: 10, fontWeight: '500', marginTop: 10, color: 'lightgray', marginRight: 2, }}>The World's {""}<Text style={{ fontWeight: "bold", color: "orange" }}>Best Clothes</Text>
             </Text>
-            <Text style={{ paddingHorizontal: 10, marginTop: 10, fontWeight: "bold", color: "black" }}>Categories</Text>
+            <Text style={{ paddingHorizontal: 10, marginTop: 10, fontWeight: "bold", color: "white" }}>Categories</Text>
 
             <View style={{ paddingTop: 20, flexDirection: 'row', alignContent: 'center', justifyContent: 'space-evenly' }}>
 
@@ -36,7 +37,9 @@ export default function Home({ navigation }) {
 
             </View>
                 <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
-            <View style={{ flexDirection: 'row', paddingTop: 20, paddingHorizontal: 10,}}>
+                    <View><Text style={{ fontWeight: "bold", color: "black", paddingTop: 20, paddingBottom: 20 }}>Casual</Text></View>
+
+                    <View style={{ flexDirection: 'row', paddingTop: 20, paddingHorizontal: 10, }}>
 
                 <TouchableOpacity style={{ flexDirection: 'column', borderRadius: 10, backgroundColor: 'lightgray', padding: 5, marginRight: 15 }}>
                     <AntDesign name="hearto" size={24} color="black" />
@@ -51,16 +54,14 @@ export default function Home({ navigation }) {
                         uri: "data:image/jpeg;base64,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"
                         }} />
                     <Text>Kaftan 1</Text>
-                        <Text>Ghc 200</Text>
-                    
-
-                </TouchableOpacity>
+                            <Text>Ghc 200</Text>
+                        </TouchableOpacity>
 
                 <TouchableOpacity style={{ flexDirection: 'column', borderRadius: 5, backgroundColor: 'lightgray', padding: 5, marginRight: 15 }}>
                     <AntDesign name="hearto" size={24} color="black" />
                 <Image
                     style={{
-                        width: 250,
+                        width: 300,
                         height: 500,
                         borderRadius: 20,
                         marginHorizontal: 10,
@@ -71,12 +72,44 @@ export default function Home({ navigation }) {
                         }} />
                     <Text>Kaftan 2</Text>
                     <Text>Ghc 200</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={{ flexDirection: 'column', borderRadius: 5, backgroundColor: 'lightgray', padding: 5, marginRight: 15 }}>
+                            <AntDesign name="hearto" size={24} color="black" />
+                            <Image
+                                style={{
+                                    width: 500,
+                                    height: 500,
+                                    borderRadius: 20,
+                                    marginHorizontal: 10,
+                                    transform: [{ rotate: "0deg" }]
+                                }}
+                                source={{
+                                    uri: "https://cdn.shopify.com/s/files/1/2026/3639/products/main_image_179a0119-ba4f-4ed6-b230-e97fc1e1c013_480x480.jpg?v=1569208331"}} />
+                            <Text>Kaftan 2</Text>
+                            <Text>Ghc 200</Text>
+                        </TouchableOpacity>
+
+                <TouchableOpacity style={{ flexDirection: 'column', borderRadius: 5, backgroundColor: 'lightgray', padding: 5, marginRight: 15 }}>
+                    <AntDesign name="hearto" size={24} color="black" />
+                <Image
+                    style={{
+                        width: 300,
+                        height: 500,
+                        borderRadius: 20,
+                        marginHorizontal: 10,
+                        transform: [{ rotate: "0deg" }]
+                    }}
+                    source={{
+                        uri:"https://i.pinimg.com/474x/39/a0/68/39a06834702bc70497f3b1928ea6f4be.jpg"}} />
+                    <Text>Kaftan 2</Text>
+                    <Text>Ghc 200</Text>
                     </TouchableOpacity>
-                    
                 </View>
                 </ScrollView>
 
                 <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+                    <View><Text style={{ fontWeight: "bold", color: "black", paddingTop: 20, paddingBottom: 20 }}>Office</Text></View>
+
             <View style={{ flexDirection: 'row', paddingTop: 20, paddingHorizontal: 10}}>
                 <TouchableOpacity style={{ flexDirection: 'column', borderRadius: 5, backgroundColor: 'lightgray', padding: 5, marginRight: 15 }}>
                     <AntDesign name="hearto" size={24} color="black" />
@@ -125,7 +158,7 @@ export default function Home({ navigation }) {
                     <Button
                         andriod_ripple
                         onPress={() => {
-                            navigation.navigate("Cart")
+                            navigation.navigate("CartScreen")
                         }}
                         title="Next" />
                 </Pressable>

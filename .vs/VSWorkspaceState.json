@@ -2,8 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\assets",
+    "\\Components",
+    "\\Constants",
     "\\Screens"
   ],
-  "SelectedNode": "\\Screens\\Login.js",
+  "SelectedNode": "\\Screens\\HomeScreen.js",
   "PreviewInSolutionExplorer": false
 }

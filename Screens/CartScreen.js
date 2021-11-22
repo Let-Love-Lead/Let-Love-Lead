@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, Button, Image, TouchableOpacity, ScrollView } from "react-native";
 import { Ionicons, MaterialCommunityIcons, Foundation, MaterialIcons, AntDesign } from '@expo/vector-icons';
 
-export default function Cart() {
+export default function CartScreen() {
     return (
         <View style={{ backgroundColor: "White"}}>
             <Text style={{ flex: 1, fontSize: 18, fontFamily:"timesNewRoman" }}>
